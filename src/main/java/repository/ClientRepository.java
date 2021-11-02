@@ -33,18 +33,6 @@ public class ClientRepository {
         }
     }
 
-
-
-    public void insert(Client client){
-        String insert="";
-        insert+="insert into client(nume,prenume,adresa,nr_telefon,parola) values (";
-        insert+=String.format("'%s','%s','%s','%s','%s'",client.getNume(),client.getPrenume(),client.getAdresa(),client.getNr_telefon(),client.getParola());
-        insert+=");";
-        executeStatement(insert);
-
-    }
-
-
     private ResultSet all(){
 
         executeStatement("select * from client");
@@ -75,6 +63,40 @@ public class ClientRepository {
         }
         return clienti;
     }
+
+   //CRUD
+
+    public void insert(Client client){
+        String insert="";
+        insert+="insert into client(nume,prenume,adresa,nr_telefon,parola) values (";
+        insert+=String.format("'%s','%s','%s','%s','%s'",client.getNume(),client.getPrenume(),client.getAdresa(),client.getNr_telefon(),client.getParola());
+        insert+=");";
+        executeStatement(insert);
+
+    }
+
+    public void updateAdresa(String nume, String prenume,String adresaNoua){
+
+        String update="";
+        update=String.format("update client set adresa='%s'",adresaNoua);
+        update+=String.format(" where nume='%s'", nume);
+        update+=String.format(" and prenume='%s'", prenume);
+
+        executeStatement(update);
+
+    }
+
+    public void delete(Client client){
+        String numeC=client.getNume();
+        String prenumeC=client.getPrenume();
+        String deleteC="";
+        deleteC+=String.format("delete from client where nume='%s'",numeC);
+        deleteC+=String.format("and prenume='%s'",prenumeC);
+
+        executeStatement(deleteC);
+    }
+
+
 
 
 
