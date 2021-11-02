@@ -45,4 +45,37 @@ public class ClientRepository {
     }
 
 
+    private ResultSet all(){
+
+        executeStatement("select * from client");
+
+        try{
+            return statement.getResultSet();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+    public List<Client> totiClientii(){
+
+        ResultSet set=all();
+        ArrayList<Client> clienti=new ArrayList<>();
+        try{
+            while(set.next()){
+
+                //public Client(int client_id, String nume, String prenume, String adresa, String nr_telefon, String parola)
+                clienti.add(new Client(Integer.parseInt(set.getString(1)),set.getString(2), set.getString(3),set.getString(4),set.getString(5),set.getString(6)));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return clienti;
+    }
+
+
+
 }

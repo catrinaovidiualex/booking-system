@@ -8,6 +8,15 @@ public class Client implements Comparable<Client> {
     private String nr_telefon;
     private String parola;
 
+    public Client(int client_id, String nume, String prenume, String adresa, String nr_telefon, String parola) {
+        this.client_id = client_id;
+        this.nume = nume;
+        this.prenume = prenume;
+        this.adresa = adresa;
+        this.nr_telefon = nr_telefon;
+        this.parola = parola;
+    }
+
     public int getClient_id() {
         return client_id;
     }
