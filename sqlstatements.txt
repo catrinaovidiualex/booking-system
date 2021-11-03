@@ -1,0 +1,66 @@
+create database trainTicketingSystem
+
+use trainTicketingSystem
+
+
+
+CREATE TABLE client (
+    id_client int primary key not null auto_increment,
+    nume varchar(255) not null,
+    prenume varchar(255) not null,
+    adresa varchar(255) not null,
+    nr_telefon varchar(255) not null,
+    parola varchar(255) not null
+    
+);
+
+
+CREATE TABLE factura (
+    id_factura int primary key not null auto_increment,
+    id_client varchar(255) not null,
+    pret_bilet int not null
+    
+);
+
+use programare
+
+
+CREATE TABLE vagon (
+    id_vagon int primary key not null auto_increment,
+    tip_clasa int not null,
+    numar_vagon int not null,
+    id_tren int not null,
+    nr_locrez int not null
+   
+);
+
+CREATE TABLE rezervare (
+    id_rezervare int primary key not null auto_increment,
+    id_client int not null,
+    id_vagon int not null,
+    id_tren int not null
+
+);
+
+CREATE TABLE tren (
+    id_tren int primary key not null auto_increment,
+    numar_tren int not null,
+    statiaPlecare varchar(255) not null,
+    statiaSosire varchar(255) not null,
+    id_vagon int not null
+    );
+
+select * from client
+select * from factura
+select * from vagon
+select * from rezervare
+select * from tren
+
+insert into client(nume, prenume, adresa, nr_telefon, parola) values('Popescu','Ion','Bd. Eroilor, Bucuresti, sector2','0766982315','pion2021')
+insert into client(nume, prenume, adresa, nr_telefon, parola) values('Ionescu','Ana','str. M. Eminescu, nr. 2, Brasov','0776328927','ananaionescu')
+
+delete from client where nume='Ionescu' and prenume='Ana'
+
+update client
+set adresa="str I. C. Bratianu, nr. 13, Braila"
+where nume='Ionescu' and prenume='Ana'

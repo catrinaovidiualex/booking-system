@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `factura`;
 CREATE TABLE `factura` (
   `id_factura` int NOT NULL AUTO_INCREMENT,
   `id_client` varchar(255) NOT NULL,
-  `pret_camera` int NOT NULL,
+  `pret_bilet` int NOT NULL,
   PRIMARY KEY (`id_factura`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-02 22:52:22
+-- Dump completed on 2021-11-03 22:03:31

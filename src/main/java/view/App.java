@@ -10,11 +10,11 @@ public class App {
        /* login.play();*/
 
         Client c1=new Client(4,"Catrina","Alexandru","Str, Plevnei, nr. 1, Brasov","077668899","alextest2021");
-        Client c2=new Client(666,"Mutu","Adi","Str, Plevnei, nr. 1, Constanta","075568899","adiMt2021");
+        Client c2=new Client(666,"Mutu","Adina","Str, Plevnei, nr. 1, Constanta","075568899","adinaMt2021");
         ClientRepository cr= new ClientRepository();
 
         //cr.insert(c1);
-        //cr.insert(c2);
+        cr.insert(c2);
         //cr.updateAdresa("Mutu","Adi","sos. Nordului, nr. 78, Bucuresti");
         //cr.delete(c2);
 

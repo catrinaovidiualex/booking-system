@@ -30,7 +30,7 @@ CREATE TABLE `client` (
   `nr_telefon` varchar(255) NOT NULL,
   `parola` varchar(255) NOT NULL,
   PRIMARY KEY (`id_client`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `client` (
 
 LOCK TABLES `client` WRITE;
 /*!40000 ALTER TABLE `client` DISABLE KEYS */;
-INSERT INTO `client` VALUES (1,'Popescu','Ion','Bd. Eroilor, Bucuresti, sector2','0766982315','pion2021'),(2,'Ionescu','Ana','str I. C. Bratianu, nr. 13, Braila','0776328927','ananaionescu'),(3,'Catrina','Alexandru','str. C. Stere, nr. 65, Calafat','077668899','alextest2021');
+INSERT INTO `client` VALUES (1,'Popescu','Ion','Bd. Eroilor, Bucuresti, sector2','0766982315','pion2021'),(2,'Ionescu','Ana','str I. C. Bratianu, nr. 13, Braila','0776328927','ananaionescu'),(3,'Catrina','Alexandru','str. C. Stere, nr. 65, Calafat','077668899','alextest2021'),(5,'Mutu','Adina','Str, Plevnei, nr. 1, Constanta','075568899','adinaMt2021');
 /*!40000 ALTER TABLE `client` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-02 22:52:23
+-- Dump completed on 2021-11-03 22:03:32
