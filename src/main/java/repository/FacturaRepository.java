@@ -35,8 +35,6 @@ public class FacturaRepository {
         }
     }
 
-
-
     private ResultSet all(){
 
         executeStatement("select * from factura");
@@ -61,9 +59,9 @@ public class FacturaRepository {
                 Factura factura=new Factura();
 
 
-                factura.setFactura_id(set.getInt(1));
-                factura.setClient_id(set.getInt(2));
-                factura.setPret_camera(set.getInt(3));
+                factura.setId_factura(set.getInt(1));
+                factura.setId_client(set.getInt(2));
+                factura.setPret_bilet(set.getInt(3));
 
 
                 facturi.add(factura);
