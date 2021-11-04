@@ -22,9 +22,10 @@ public class App {
         //cr.updateAdresa("Mutu","Adi","sos. Nordului, nr. 78, Bucuresti");
         //cr.delete(c2);
 
-       // Factura f2=new Factura(2,210);
-        //FacturaRepository fr=new FacturaRepository();
+       //Factura f2=new Factura(2,210);
+        FacturaRepository fr=new FacturaRepository();
         //fr.insert(f2);
+        fr.updatePretBilet(2,230);
 
     }
 }

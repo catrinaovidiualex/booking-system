@@ -53,6 +53,14 @@ public class FacturaController {
             System.out.println("Factura exista in baza de date.");
         }
     }
+    public void updatePretBilet(int id_factura, int pretNou){
+        if(exist(factura(id_factura))==true) {
+            facturi.updatePretBilet(id_factura,pretNou);
+            System.out.println("Factura a fost modificata");
+        }else{
+            System.out.println("Factura nu exita in baza de date!");
+        }
+    }
 
 
 

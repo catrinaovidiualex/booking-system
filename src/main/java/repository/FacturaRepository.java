@@ -86,4 +86,15 @@ public class FacturaRepository {
 
         executeStatement(insert);
     }
+
+    public void updatePretBilet(int id_factura, int pretNou){
+
+        String updatePret="";
+        updatePret="update factura set pret_bilet=";
+        updatePret+=String.format("'%d'",pretNou);
+        updatePret+=String.format("where id_factura=");
+        updatePret+=String.format("'%d'",id_factura);
+
+        executeStatement(updatePret);
+    }
 }
