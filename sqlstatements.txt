@@ -64,3 +64,9 @@ delete from client where nume='Ionescu' and prenume='Ana'
 update client
 set adresa="str I. C. Bratianu, nr. 13, Braila"
 where nume='Ionescu' and prenume='Ana'
+
+insert into factura(id_client,pret_bilet) values (1,150);
+
+update factura
+set pret_bilet=160
+where id_factura=1
