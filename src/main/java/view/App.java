@@ -1,7 +1,11 @@
 package view;
 
 import model.Client;
+import model.Factura;
 import repository.ClientRepository;
+import repository.FacturaRepository;
+
+import javax.xml.stream.FactoryConfigurationError;
 
 public class App {
 
@@ -14,9 +18,13 @@ public class App {
         ClientRepository cr= new ClientRepository();
 
         //cr.insert(c1);
-        cr.insert(c2);
+        //cr.insert(c2);
         //cr.updateAdresa("Mutu","Adi","sos. Nordului, nr. 78, Bucuresti");
         //cr.delete(c2);
+
+       // Factura f2=new Factura(2,210);
+        //FacturaRepository fr=new FacturaRepository();
+        //fr.insert(f2);
 
     }
 }

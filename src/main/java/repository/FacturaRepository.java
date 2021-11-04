@@ -9,7 +9,7 @@ import java.util.List;
 public class FacturaRepository {
 
 
-    private String Jdbc="jdbc:mysql://localhost:3306/hotel_db";
+    private String Jdbc="jdbc:mysql://localhost:3306/trainTicketingSystem";
     private String username="root";
     private  String password="root";
     private Connection connection=null;
@@ -77,4 +77,13 @@ public class FacturaRepository {
     }
 
     //CRUD
+
+    public void insert(Factura factura){
+        String insert="";
+        insert+="insert into factura(id_client,pret_bilet) values (";
+        insert+=String.format("'%d','%d'", factura.getId_client(),factura.getPret_bilet());
+        insert+=String.format(");");
+
+        executeStatement(insert);
+    }
 }

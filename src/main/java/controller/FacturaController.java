@@ -45,6 +45,15 @@ public class FacturaController {
 
     //CRUD
 
+    public void insert(Factura factura){
+        if(exist(factura)==false) {
+            facturi.insert(factura);
+            System.out.println("Factura a fost adaugata.");
+        }else {
+            System.out.println("Factura exista in baza de date.");
+        }
+    }
+
 
 
 }
