@@ -97,4 +97,13 @@ public class FacturaRepository {
 
         executeStatement(updatePret);
     }
+
+    public void deleteFactura(int id_factura){
+
+        String delete="";
+        delete+=String.format("delete from factura where id_factura=%d",id_factura);
+        delete+=";";
+        executeStatement(delete);
+
+    }
 }

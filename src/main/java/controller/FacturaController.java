@@ -61,7 +61,14 @@ public class FacturaController {
             System.out.println("Factura nu exita in baza de date!");
         }
     }
+    public void deleteFactura(int id_factura){
+        if(exist(factura(id_factura))==true) {
+            facturi.deleteFactura(id_factura);
+            System.out.println("Factura a fost stearsa!");
+        }else{
+            System.out.println("Factura nu exista in baza de date!");
+        }
 
-
+    }
 
 }
