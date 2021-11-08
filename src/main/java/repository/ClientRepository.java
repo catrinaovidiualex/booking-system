@@ -29,7 +29,7 @@ public class ClientRepository {
             statement.execute(execute);
 
         }catch (SQLException e){
-            System.out.println("Nu a reusit conectarea la BD "+ execute);
+            System.out.println("Nu s-a realizat conectarea la baza de date "+ execute);
         }
     }
 

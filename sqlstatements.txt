@@ -30,15 +30,17 @@ CREATE TABLE vagon (
     tip_clasa int not null,
     numar_vagon int not null,
     id_tren int not null,
-    nr_locrez int not null
+    nr_loc int 
    
 );
 
 CREATE TABLE rezervare (
     id_rezervare int primary key not null auto_increment,
+    data_rezervare date not null,
     id_client int not null,
     id_vagon int not null,
-    id_tren int not null
+    id_tren int not null,
+    nr_locrezervat int not null
 
 );
 
@@ -73,3 +75,5 @@ set pret_bilet=160
 where id_factura=1
 
 delete from factura where id_factura=3
+
+insert into rezervare(data_rezervare,id_client, id_vagon,id_tren,nr_locrezervat) values ('2021-11-07',1,5,1129,66);
