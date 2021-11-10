@@ -1,9 +1,10 @@
 package repository;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import model.Rezervare;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RezervareRepository {
 
@@ -33,4 +34,32 @@ public class RezervareRepository {
                 System.out.println("Nu s-a realizat conectarea la baza de date"+ execute);
             }
         }
+
+    private ResultSet all(){
+
+        executeStatement("select * from rezervari");
+
+        try{
+            return statement.getResultSet();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<Rezervare> totateRezervarile(){
+
+        ResultSet set=all();
+        List<Rezervare> rezervari=new ArrayList<>();
+        try{
+            while(set.next()){
+                /*rezervari.add(new Rezervare());*/
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return rezervari;
+    }
 }
