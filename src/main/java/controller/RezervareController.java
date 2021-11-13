@@ -57,6 +57,18 @@ public class RezervareController {
         return new Rezervare(-1,"1900-01-01",-1,-1,-1,-1);
     }
 
+    //CRUD
+
+    public void insert (Rezervare rezervare){
+        if(exist(rezervare)==false){
+            rezervari.insert(rezervare);
+            System.out.println("Rezervarea a fost efectuata");
+        }else{
+            System.out.println("Rezervarea exista deja in baza de date");
+        }
+
+    }
+
 
 
 

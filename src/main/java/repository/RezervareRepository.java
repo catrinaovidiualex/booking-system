@@ -66,4 +66,14 @@ public class RezervareRepository {
     }
 
     //CRUD
+
+    public void insert(Rezervare rezervare){
+        //insert into rezervare(data_rezervare,id_client, id_vagon,id_tren,nr_locrezervat) values ('2021-11-07',1,5,1129,66);
+
+        String insert="";
+        insert+="insert into rezervare(data_rezervare,id_client, id_vagon,id_tren,nr_locrezervat) values (";
+        insert+=String.format("'%s',%d,%d,%d,%d",rezervare.getData_rezervare(),rezervare.getId_client(),rezervare.getId_vagon(),rezervare.getId_tren(),rezervare.getNr_locrezervat());
+        insert+=");";
+        executeStatement(insert);
+    }
 }
