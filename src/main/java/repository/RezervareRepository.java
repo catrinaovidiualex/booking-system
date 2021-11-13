@@ -54,7 +54,9 @@ public class RezervareRepository {
         List<Rezervare> rezervari=new ArrayList<>();
         try{
             while(set.next()){
-                /*rezervari.add(new Rezervare());*/
+               //Rezervare(int id_rezervare, Date data_rezervare, int id_client, int id_vagon, int id_tren, int nr_locrezervat)
+               rezervari.add(new Rezervare(set.getInt(1),set.getDate(2),set.getInt(3),set.getInt(4),set.getInt(5),set.getInt(6)));
+
             }
         }catch (Exception e){
             e.printStackTrace();
