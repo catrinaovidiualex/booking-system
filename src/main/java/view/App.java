@@ -34,7 +34,11 @@ public class App {
         RezervareRepository rr=new RezervareRepository();
         //rr.insert(r1);
 
-        rr.updateClient(3,1);
+        //rr.updateClient(3,1);
+        //rr.updateVagon(3,6);
+        //rr.updateTren(3,1926);
+        //rr.updateLocRezervare(3,33);
+        //rr.deleteRezervare(3);
 
 
     }

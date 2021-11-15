@@ -84,4 +84,35 @@ public class RezervareRepository {
         executeStatement(updateC);
 
     }
+    public void updateVagon(int id_rezervare, int id_vagon){
+        String updateV="";
+        updateV+=String.format("update rezervare set id_vagon=%d",id_vagon);
+        updateV+=String.format(" where id_rezervare=%d",id_rezervare);
+
+        executeStatement(updateV);
+
+    }
+    public void updateTren(int id_rezervare, int id_tren){
+        String updateT="";
+        updateT+=String.format("update rezervare set id_tren=%d",id_tren);
+        updateT+=String.format(" where id_rezervare=%d",id_rezervare);
+
+        executeStatement(updateT);
+
+    }
+    public void updateLocRezervare(int id_rezervare, int nr_locrezervat){
+        String updateLr="";
+        updateLr+=String.format("update rezervare set nr_locrezervat=%d",nr_locrezervat);
+        updateLr+=String.format(" where id_rezervare=%d",id_rezervare);
+
+        executeStatement(updateLr);
+
+    }
+    public void deleteRezervare(int id_rezervare){
+        String deleteR="";
+        deleteR+=String.format("delete from rezervare where id_rezervare=%d",id_rezervare);
+        deleteR+=";";
+        executeStatement(deleteR);
+
+    }
 }

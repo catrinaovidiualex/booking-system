@@ -78,6 +78,48 @@ public class RezervareController {
 
     }
 
+    public void updateVagon(int id_rezervare,int id_vagon){
+
+        if(exist(rezervare(id_rezervare))==true){
+            rezervari.updateVagon(id_rezervare,id_vagon);
+            System.out.println("Rezervarea a fost modificata!");
+        }
+        else {
+            System.out.println("Rezervarea nu exista in baza de date");
+        }
+    }
+
+    public void updateTren(int id_rezervare,int id_tren){
+
+        if(exist(rezervare(id_rezervare))==true){
+            rezervari.updateVagon(id_rezervare,id_tren);
+            System.out.println("Rezervarea a fost modificata!");
+        }
+        else {
+            System.out.println("Rezervarea nu exista in baza de date");
+        }
+    }
+
+    public void updateLocRezervare(int id_rezervare,int nr_locrezervat){
+
+        if(exist(rezervare(id_rezervare))==true){
+            rezervari.updateVagon(id_rezervare,nr_locrezervat);
+            System.out.println("Rezervarea a fost modificata!");
+        }
+        else {
+            System.out.println("Rezervarea nu exista in baza de date");
+        }
+    }
+
+    public void deleteRezervare(int id_rezervare){
+        if(exist(rezervare(id_rezervare))==true) {
+            rezervari.deleteRezervare(id_rezervare);
+            System.out.println("Rezervarea a fost stearsa.");
+        }else{
+            System.out.println("Rezervarea nu exista pt a o sterge.");
+        }
+    }
+
 
 
 

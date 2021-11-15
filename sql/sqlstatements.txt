@@ -74,6 +74,13 @@ update factura
 set pret_bilet=160
 where id_factura=1
 
-delete from factura where id_factura=3
+delete from factura where id_factura=3;
 
 insert into rezervare(data_rezervare,id_client, id_vagon,id_tren,nr_locrezervat) values ('2021-11-07',1,5,1129,66);
+insert into rezervare(data_rezervare,id_client, id_vagon,id_tren,nr_locrezervat) values ('2021-11-15',3,2,1183,29);
+update rezervare
+set id_client=1
+where id_rezervare=4
+
+delete from rezervare where id_rezervare=4;
+
