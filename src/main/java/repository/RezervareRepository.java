@@ -76,4 +76,12 @@ public class RezervareRepository {
         insert+=");";
         executeStatement(insert);
     }
+    public void updateClient(int id_rezervare, int id_client){
+        String updateC="";
+        updateC+=String.format("update rezervare set id_client=%d",id_client);
+        updateC+=String.format(" where id_rezervare=%d",id_rezervare);
+
+        executeStatement(updateC);
+
+    }
 }

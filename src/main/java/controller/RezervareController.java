@@ -68,6 +68,15 @@ public class RezervareController {
         }
 
     }
+    public void updateClient(int id_rezervare, int id_client){
+        if (exist(rezervare(id_rezervare))==true){
+            rezervari.updateClient(id_rezervare,id_client);
+           System.out.println("Rezervarea a fost modificata!");
+        }else {
+            System.out.println("Rezervarea nu exista in baza de date!");
+        }
+
+    }
 
 
 

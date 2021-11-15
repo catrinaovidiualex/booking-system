@@ -30,9 +30,11 @@ public class App {
         //fr.updatePretBilet(2,230);
         //fr.deleteFactura(4);
 
-        Rezervare r1= new Rezervare(2,"2021-11-13",2,3,1129,53);
+        //Rezervare r1= new Rezervare(2,"2021-11-13",2,3,1129,53);
         RezervareRepository rr=new RezervareRepository();
-        rr.insert(r1);
+        //rr.insert(r1);
+
+        rr.updateClient(3,1);
 
 
     }
