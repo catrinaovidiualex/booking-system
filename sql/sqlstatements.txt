@@ -82,5 +82,8 @@ update rezervare
 set id_client=1
 where id_rezervare=4
 
+update rezervare
+set id_tren=101
+where id_rezervare=1
 delete from rezervare where id_rezervare=4;
 
