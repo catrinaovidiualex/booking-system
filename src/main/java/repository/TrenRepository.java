@@ -1,6 +1,10 @@
 package repository;
 
+import model.Tren;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TrenRepository {
 
@@ -42,6 +46,22 @@ public class TrenRepository {
             e.printStackTrace();
             return null;
         }
+
+    }
+
+    public List<Tren> toateTrenurile(){
+        ResultSet set=all();
+        List<Tren> camere=new ArrayList<>();
+        try{
+            while(set.next()){
+                //int numar_tren, String statiaPlecare, String statiaSosire, int id_vagon
+                camere.add(new Tren(set.getInt(1),set.getString(2),set.getString(3),set.getInt(4)));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return camere;
 
     }
 
