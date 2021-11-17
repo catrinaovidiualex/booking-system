@@ -30,7 +30,7 @@ CREATE TABLE `rezervare` (
   `id_tren` int NOT NULL,
   `nr_locrezervat` int NOT NULL,
   PRIMARY KEY (`id_rezervare`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `rezervare` (
 
 LOCK TABLES `rezervare` WRITE;
 /*!40000 ALTER TABLE `rezervare` DISABLE KEYS */;
-INSERT INTO `rezervare` VALUES (1,'2021-11-07',1,5,1129,66);
+INSERT INTO `rezervare` VALUES (1,'2021-11-07',1,5,1,66),(2,'2021-11-13',2,3,2,53),(4,'2021-11-15',3,2,1,29);
 /*!40000 ALTER TABLE `rezervare` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-08 22:17:36
+-- Dump completed on 2021-11-17 12:49:50

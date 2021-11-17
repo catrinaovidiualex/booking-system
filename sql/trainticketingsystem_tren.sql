@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `tren`;
 CREATE TABLE `tren` (
   `id_tren` int NOT NULL AUTO_INCREMENT,
   `numar_tren` int NOT NULL,
+  `tip_tren` varchar(255) NOT NULL,
   `statiaPlecare` varchar(255) NOT NULL,
   `statiaSosire` varchar(255) NOT NULL,
   `id_vagon` int NOT NULL,
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-08 22:17:37
+-- Dump completed on 2021-11-17 12:49:50

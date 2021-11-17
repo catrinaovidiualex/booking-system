@@ -22,7 +22,7 @@ CREATE TABLE factura (
     
 );
 
-use programare
+
 
 
 CREATE TABLE vagon (
@@ -44,9 +44,11 @@ CREATE TABLE rezervare (
 
 );
 
+
 CREATE TABLE tren (
     id_tren int primary key not null auto_increment,
     numar_tren int not null,
+    tip_tren varchar(255) not null,
     statiaPlecare varchar(255) not null,
     statiaSosire varchar(255) not null,
     id_vagon int not null
@@ -83,7 +85,11 @@ set id_client=1
 where id_rezervare=4
 
 update rezervare
-set id_tren=101
-where id_rezervare=1
+set id_tren=1
+where id_rezervare=4
 delete from rezervare where id_rezervare=4;
+
+insert into tren (numar_tren,tip_tren,statiaPlecare,statiaSosire,id_vagon) values (1299,"InterRegio","Bucuresti","Brasov",2);
+
+
 

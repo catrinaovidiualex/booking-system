@@ -4,13 +4,15 @@ public class Tren implements Comparable<Tren> {
 
     private int id_tren;
     private int numar_tren;
+    private String tip_tren;
     private String statiaPlecare;
     private String statiaSosire;
     private int id_vagon;
 
-    public Tren(int numar_tren, String statiaPlecare, String statiaSosire, int id_vagon) {
+    public Tren(int numar_tren,String tip_tren, String statiaPlecare, String statiaSosire, int id_vagon) {
 
         this.numar_tren = numar_tren;
+        this.tip_tren=tip_tren;
         this.statiaPlecare = statiaPlecare;
         this.statiaSosire = statiaSosire;
         this.id_vagon = id_vagon;
@@ -29,6 +31,14 @@ public class Tren implements Comparable<Tren> {
 
     public void setNumar_tren(int numar_tren) {
         this.numar_tren = numar_tren;
+    }
+
+    public String getTip_tren() {
+        return tip_tren;
+    }
+
+    public void setTip_tren(String tip_tren) {
+        this.tip_tren = tip_tren;
     }
 
     public String getStatiaPlecare() {
@@ -74,6 +84,7 @@ public class Tren implements Comparable<Tren> {
         return "Tren{" +
                 "id_tren=" + id_tren +
                 ", numar_tren=" + numar_tren +
+                ", tip_tren='" + tip_tren + '\'' +
                 ", statiaPlecare='" + statiaPlecare + '\'' +
                 ", statiaSosire='" + statiaSosire + '\'' +
                 ", id_vagon=" + id_vagon +
