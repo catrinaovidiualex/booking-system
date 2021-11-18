@@ -44,8 +44,10 @@ public class App {
 
         TrenRepository tr=new TrenRepository();
         //Tren t1= new Tren(1978,"Regio","Caracal","Craiova",1);
-        Tren t2= new Tren(1299,"InterRegio","Ploiesti","Sibiu",1);
-        tr.insert(t2);
+        //Tren t2= new Tren(1299,"InterRegio","Ploiesti","Sibiu",1);
+        //tr.insert(t2);
+
+        tr.update(2,1635);
 
 
     }

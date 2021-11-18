@@ -72,5 +72,11 @@ public class TrenRepository {
         executeStatement(insert);
 
     }
+    public void update(int id_tren,int numarNou_tren){
+        String updateT="";
+        updateT+=String.format("update tren set numar_tren=%d",numarNou_tren);
+        updateT+=String.format(" where id_tren=%d",id_tren);
+        executeStatement(updateT);
+    }
 
 }

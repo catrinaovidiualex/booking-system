@@ -74,6 +74,15 @@ public class TrenController {
             System.out.println("Trenul exista deja in baza de date");
         }
     }
+    public void update(int id_tren,int numarNou_tren){
+        if(exist(id_tren(id_tren))==true) {
+            trenuri.update(id_tren, numarNou_tren);
+            System.out.println("Trenul a fost actualizat. ");
+        }else{
+            System.out.println("Trenul nu exista in baza de date.");
+        }
+
+    }
 
 
 

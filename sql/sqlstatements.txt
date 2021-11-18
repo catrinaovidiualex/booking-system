@@ -91,5 +91,7 @@ delete from rezervare where id_rezervare=4;
 
 insert into tren (numar_tren,tip_tren,statiaPlecare,statiaSosire,id_vagon) values (1299,"InterRegio","Bucuresti","Brasov",2);
 
-
+update tren
+set numar_tren=1968
+where id_tren=3
 
