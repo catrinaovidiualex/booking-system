@@ -47,7 +47,9 @@ public class App {
         //Tren t2= new Tren(1299,"InterRegio","Ploiesti","Sibiu",1);
         //tr.insert(t2);
 
-        tr.update(2,1635);
+        //tr.updateNumarTren(2,1634);
+        //tr.updateTipTren(2,"InterCity");
+        tr.deleteTren(5);
 
 
     }

@@ -72,11 +72,27 @@ public class TrenRepository {
         executeStatement(insert);
 
     }
-    public void update(int id_tren,int numarNou_tren){
+    public void updateNumarTren(int id_tren,int numarNou_tren){
         String updateT="";
         updateT+=String.format("update tren set numar_tren=%d",numarNou_tren);
         updateT+=String.format(" where id_tren=%d",id_tren);
         executeStatement(updateT);
     }
+    public void updateTipTren(int id_tren,String tipTren_Nou){
+        String updateTip="";
+        updateTip+=String.format("update tren set tip_tren='%s'",tipTren_Nou);
+        updateTip+=String.format(" where id_tren=%d",id_tren);
+        executeStatement(updateTip);
+
+    }
+    public void deleteTren(int id_tren){
+
+        String deleteTren="";
+        deleteTren+=String.format("delete from tren where id_tren=%d",id_tren);
+        deleteTren+=";";
+        executeStatement(deleteTren);
+
+    }
+
 
 }

@@ -56,9 +56,9 @@ CREATE TABLE tren (
 
 select * from client
 select * from factura
-select * from vagon
 select * from rezervare
 select * from tren
+select * from vagon
 
 insert into client(nume, prenume, adresa, nr_telefon, parola) values('Popescu','Ion','Bd. Eroilor, Bucuresti, sector2','0766982315','pion2021')
 insert into client(nume, prenume, adresa, nr_telefon, parola) values('Ionescu','Ana','str. M. Eminescu, nr. 2, Brasov','0776328927','ananaionescu')
@@ -90,8 +90,12 @@ where id_rezervare=4
 delete from rezervare where id_rezervare=4;
 
 insert into tren (numar_tren,tip_tren,statiaPlecare,statiaSosire,id_vagon) values (1299,"InterRegio","Bucuresti","Brasov",2);
+insert into tren (numar_tren,tip_tren,statiaPlecare,statiaSosire,id_vagon) values (1588,"Regio","Pitesti","Targu Jiu",5);
+insert into tren (numar_tren,tip_tren,statiaPlecare,statiaSosire,id_vagon) values (1460,"Regio","Deva","Hateg",3);
 
 update tren
 set numar_tren=1968
 where id_tren=3
 
+
+delete from tren where id_tren=5

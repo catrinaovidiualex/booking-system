@@ -74,12 +74,31 @@ public class TrenController {
             System.out.println("Trenul exista deja in baza de date");
         }
     }
-    public void update(int id_tren,int numarNou_tren){
+    public void updateNumarTren(int id_tren,int numarNou_tren){
         if(exist(id_tren(id_tren))==true) {
-            trenuri.update(id_tren, numarNou_tren);
-            System.out.println("Trenul a fost actualizat. ");
+            trenuri.updateNumarTren(id_tren, numarNou_tren);
+            System.out.println("Trenul a fost actualizat!");
         }else{
-            System.out.println("Trenul nu exista in baza de date.");
+            System.out.println("Trenul nu exista in baza de date!");
+        }
+
+    }
+    public void updateTipTren(int id_tren,String tipTren_nou){
+        if(exist(id_tren(id_tren))==true) {
+            trenuri.updateTipTren(id_tren, tipTren_nou);
+            System.out.println("Trenul a fost actualizat!");
+        }else{
+            System.out.println("Trenul nu exista in baza de date!");
+        }
+
+    }
+    public void deleteTren(int id_tren){
+        if(exist(id_tren(id_tren))==true) {
+            trenuri.deleteTren(id_tren);
+            System.out.println("Trenul a fost sters din baza de date!");
+            trenuri.deleteTren(id_tren);
+        }else{
+            System.out.println("Trenul nu exista in baza de date!");
         }
 
     }
