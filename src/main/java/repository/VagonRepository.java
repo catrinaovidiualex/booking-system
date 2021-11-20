@@ -1,6 +1,12 @@
 package repository;
 
+import com.mysql.cj.protocol.Resultset;
+import jdk.internal.jimage.ImageStrings;
+import model.Vagon;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VagonRepository {
 
@@ -9,6 +15,7 @@ public class VagonRepository {
     private String password = "root";
     private Connection connection = null;
     private Statement statement = null;
+
 
 
     public VagonRepository() {
@@ -38,6 +45,22 @@ public class VagonRepository {
             e.printStackTrace();
             return null;
         }
+    }
+    public List<Vagon> toateVagoanele(){
+        ResultSet set=all();
+        List<Vagon> camere=new ArrayList<>();
+        try{
+            while(set.next()){
+                //int tip_clasa, int numar_vagon, int id_tren, int nr_loc
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return camere;
+
+
     }
 
 
