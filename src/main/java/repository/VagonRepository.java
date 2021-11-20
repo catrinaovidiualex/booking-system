@@ -48,17 +48,18 @@ public class VagonRepository {
     }
     public List<Vagon> toateVagoanele(){
         ResultSet set=all();
-        List<Vagon> camere=new ArrayList<>();
+        List<Vagon> vagoane=new ArrayList<>();
         try{
             while(set.next()){
                 //int tip_clasa, int numar_vagon, int id_tren, int nr_loc
+                vagoane.add(new Vagon(set.getInt(1),set.getInt(2),set.getInt(3),set.getInt(4)));
 
             }
         }catch (Exception e){
             e.printStackTrace();
             return null;
         }
-        return camere;
+        return vagoane;
 
 
     }
