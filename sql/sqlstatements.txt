@@ -99,3 +99,12 @@ where id_tren=3
 
 
 delete from tren where id_tren=5
+
+
+insert into vagon (tip_clasa,numar_vagon,id_tren,nr_loc) values (1,3,1299,45)
+insert into vagon (tip_clasa,numar_vagon,id_tren,nr_loc) values (2,6,4,73)
+update vagon set id_tren=3 where id_vagon=1
+
+delete from vagon where id_vagon=3
+
+

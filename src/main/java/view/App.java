@@ -1,13 +1,7 @@
 package view;
 
-import model.Client;
-import model.Factura;
-import model.Rezervare;
-import model.Tren;
-import repository.ClientRepository;
-import repository.FacturaRepository;
-import repository.RezervareRepository;
-import repository.TrenRepository;
+import model.*;
+import repository.*;
 
 import javax.xml.stream.FactoryConfigurationError;
 
@@ -49,7 +43,16 @@ public class App {
 
         //tr.updateNumarTren(2,1634);
         //tr.updateTipTren(2,"InterCity");
-        tr.deleteTren(5);
+        //tr.deleteTren(5);
+
+        VagonRepository vr=new VagonRepository();
+        //Vagon v1=  new Vagon(2,5,2,11);
+        //vr.insertV(v1);
+
+        //vr.updateV(1,3);
+        //vr.updateVLoc(2,29);
+
+        //vr.deleteV(4);
 
 
     }

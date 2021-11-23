@@ -55,8 +55,46 @@ public class VagonController {
         }
         return tipClase;
     }
+    public void afisareV(){
+        for (Vagon vgn:vagoane.toateVagoanele()){
+            System.out.println(vgn);
+        }
+    }
 
     //CRUD
+    public void insertVg(Vagon vagon){
+        if(exist(vagon)==false) {
+            System.out.println("Vagonul a fost introdus in baza de date!");
+            vagoane.insertV(vagon);
+        }else{
+            System.out.println("Vagonul exista in baza de date!");
+        }
+    }
+    public void updateIdTren(int id_vagon, int id_tren){
+        if(exist(id_vagon(id_vagon))==true) {
+            vagoane.updateV(id_vagon,id_tren);
+            System.out.println("Vagonul a fost actualizat!");
+        }else{
+            System.out.println("Vagonul nu exista in baza de date!");
+        }
+    }
+    public void updateNrLoc(int id_vagon, int nr_loc){
+        if(exist(id_vagon(id_vagon))==true) {
+            vagoane.updateVLoc(id_vagon,nr_loc);
+            System.out.println("Vagonul a fost actualizat!");
+        }else{
+            System.out.println("Vagonul nu exista in baza de date!");
+        }
+    }
+    public void delete(int id_vagon){
+        if(exist(id_vagon(id_vagon))==true) {
+            vagoane.deleteV(id_vagon);
+            System.out.println("Vagonul a fost stears din baza de date!");
+        }else{
+            System.out.println("Vagonul nu se poate sterge pentru ca nu exista in baza de date!");
+        }
+    }
+
 
 
 

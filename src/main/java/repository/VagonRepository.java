@@ -1,7 +1,7 @@
 package repository;
 
 import com.mysql.cj.protocol.Resultset;
-import jdk.internal.jimage.ImageStrings;
+/*import jdk.internal.jimage.ImageStrings;*/
 import model.Vagon;
 
 import java.sql.*;
@@ -65,6 +65,35 @@ public class VagonRepository {
     }
 
     //CRUD
+   public void insertV(Vagon vagon){
+       String insertVg="";
+       insertVg+="insert into vagon (tip_clasa,numar_vagon,id_tren,nr_loc) values (";
+       insertVg+=String.format("%d,%d,%d,%d",vagon.getTip_clasa(),vagon.getNumar_vagon(),vagon.getId_tren(),vagon.getNr_loc());
+       insertVg+=");";
+       executeStatement(insertVg);
+
+   }
+   public void updateV(int id_vagon, int id_tren){
+       String updateVg="";
+       updateVg+=String.format("update vagon set id_tren=%d",id_tren);
+       updateVg+=String.format(" where id_vagon=%d",id_vagon);
+       executeStatement(updateVg);
+
+   }
+   public void updateVLoc(int id_vagon, int nr_loc){
+        String updateVgLoc="";
+        updateVgLoc+=String.format("update vagon set nr_loc=%d",nr_loc);
+        updateVgLoc+=String.format(" where id_vagon=%d",id_vagon);
+        executeStatement(updateVgLoc);
+
+    }
+   public void deleteV(int id_vagon){
+        String deleteV="";
+        deleteV+=String.format("delete from vagon where id_vagon=%d",id_vagon);
+        deleteV+=";";
+        executeStatement(deleteV);
+    }
+
 
 
 
