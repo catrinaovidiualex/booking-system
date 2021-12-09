@@ -29,7 +29,7 @@ CREATE TABLE `vagon` (
   `id_tren` int NOT NULL,
   `nr_loc` int DEFAULT NULL,
   PRIMARY KEY (`id_vagon`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `vagon` (
 
 LOCK TABLES `vagon` WRITE;
 /*!40000 ALTER TABLE `vagon` DISABLE KEYS */;
+INSERT INTO `vagon` VALUES (1,1,3,3,45),(2,2,5,2,29);
 /*!40000 ALTER TABLE `vagon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-17 12:49:50
+-- Dump completed on 2021-12-09 20:38:16

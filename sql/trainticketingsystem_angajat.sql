@@ -16,28 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `factura`
+-- Table structure for table `angajat`
 --
 
-DROP TABLE IF EXISTS `factura`;
+DROP TABLE IF EXISTS `angajat`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `factura` (
-  `id_factura` int NOT NULL AUTO_INCREMENT,
-  `id_client` varchar(255) NOT NULL,
-  `pret_bilet` int NOT NULL,
-  PRIMARY KEY (`id_factura`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `angajat` (
+  `id_angajat` int NOT NULL AUTO_INCREMENT,
+  `nume` varchar(255) NOT NULL,
+  `prenume` varchar(255) NOT NULL,
+  `nr_telefon` varchar(255) NOT NULL,
+  `parola` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_angajat`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `factura`
+-- Dumping data for table `angajat`
 --
 
-LOCK TABLES `factura` WRITE;
-/*!40000 ALTER TABLE `factura` DISABLE KEYS */;
-INSERT INTO `factura` VALUES (1,'1',160),(2,'2',230),(5,'3',230);
-/*!40000 ALTER TABLE `factura` ENABLE KEYS */;
+LOCK TABLES `angajat` WRITE;
+/*!40000 ALTER TABLE `angajat` DISABLE KEYS */;
+/*!40000 ALTER TABLE `angajat` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -30,7 +30,7 @@ CREATE TABLE `tren` (
   `statiaSosire` varchar(255) NOT NULL,
   `id_vagon` int NOT NULL,
   PRIMARY KEY (`id_tren`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +39,7 @@ CREATE TABLE `tren` (
 
 LOCK TABLES `tren` WRITE;
 /*!40000 ALTER TABLE `tren` DISABLE KEYS */;
+INSERT INTO `tren` VALUES (1,1299,'InterRegio','Bucuresti','Brasov',2),(2,1634,'InterCity','Caracal','Craiova',1),(3,1299,'InterRegio','Ploiesti','Sibiu',1),(4,1588,'Regio','Pitesti','Targu Jiu',5);
 /*!40000 ALTER TABLE `tren` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-17 12:49:50
+-- Dump completed on 2021-12-09 20:38:17

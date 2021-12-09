@@ -33,6 +33,39 @@ public class AngajatRepository {
             System.out.println("Nu am reusit "+ execute);
         }
     }
+    private ResultSet all(){
+
+        executeStatement("select * from angajat");
+
+        try{
+            return statement.getResultSet();
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
+
+        }
+
+    }
+    public List<Angajat>totiAngajatii(){
+        ResultSet set=all();
+        List<Angajat> angajati=new ArrayList<>();
+
+        try{
+            while(set.next()){
+                angajati.add(new Angajat(set.getString(1),set.getString(2), set.getString(3),set.getString(4)));
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return angajati;
+
+    }
+
+
 
 
 }
