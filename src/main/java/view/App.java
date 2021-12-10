@@ -54,6 +54,12 @@ public class App {
 
         //vr.deleteV(4);
 
+        AngajatRepository ar=new AngajatRepository();
+        //Angajat a1= new Angajat("Popescu","Maria","0766223352","pmaria.2019");
+        //ar.insert(a1);
+
+        ar.update(1,"Alex Ovidiu","0722356132");
+
 
     }
 }

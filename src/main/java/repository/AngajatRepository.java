@@ -64,7 +64,25 @@ public class AngajatRepository {
         return angajati;
 
     }
+    public void insert(Angajat angajat){
+        //insert into angajat(nume, prenume, nr_telefon, parola) values("Alex Ovidiu","Catrina","0722356789","alex.2021")
+        String insertA="";
+        insertA+="insert into angajat(nume,prenume,nr_telefon,parola ) values (";
+        insertA+=String.format("'%s','%s','%s','%s'",angajat.getNume(),angajat.getPrenume(),angajat.getNrTelefon(),angajat.getParola());
+        insertA+=");";
+        executeStatement(insertA);
+    }
+    public void update(int id_angajat, String nume, String telefon){
 
+        //update angajat set nr_telefon="0766359317" where id_angajat=2 and nume="Popescu"
+        String updateT="";
+        updateT+=String.format("update angajat set nr_telefon='%s'",telefon);
+        updateT+=String.format(" where nume='%s'",nume);
+        updateT+=String.format(" and id_angajat=%d",id_angajat);
+
+        executeStatement(updateT);
+
+    }
 
 
 

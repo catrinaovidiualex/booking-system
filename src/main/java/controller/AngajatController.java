@@ -12,8 +12,11 @@ public class AngajatController {
     }
 
     public void insert(Angajat angajat) {
-        //angajati.insert(angajat);
+        angajati.insert(angajat);
 
+    }
+    public void update(int id_angajat, String nume, String telefon){
+        angajati.update(id_angajat, nume, telefon);
     }
 
 }
