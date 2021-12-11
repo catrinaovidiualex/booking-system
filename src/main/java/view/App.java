@@ -58,7 +58,8 @@ public class App {
         //Angajat a1= new Angajat("Popescu","Maria","0766223352","pmaria.2019");
         //ar.insert(a1);
 
-        ar.update(1,"Alex Ovidiu","0722356132");
+        //ar.update(1,"Alex Ovidiu","0722356132");
+        ar.updateP(1,"Catrina","parola.alex-2021");
 
 
     }

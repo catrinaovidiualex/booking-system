@@ -83,6 +83,17 @@ public class AngajatRepository {
         executeStatement(updateT);
 
     }
+    public void updateP(int id_angajat, String nume, String parola){
+
+        //update angajat set parola="test2021" where id_angajat=1 and nume="Catrina"
+        String updateP="";
+        updateP+=String.format("update angajat set parola='%s'",parola);
+        updateP+=String.format(" where nume='%s'",nume);
+        updateP+=String.format(" and id_angajat=%d",id_angajat);
+
+        executeStatement(updateP);
+
+    }
 
 
 

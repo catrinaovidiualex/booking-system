@@ -18,5 +18,8 @@ public class AngajatController {
     public void update(int id_angajat, String nume, String telefon){
         angajati.update(id_angajat, nume, telefon);
     }
+    public void Parola(int id_angajat, String nume, String parola){
+        angajati.updateP(id_angajat, nume, parola);
+    }
 
 }
