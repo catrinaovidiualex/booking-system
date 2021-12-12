@@ -59,7 +59,9 @@ public class App {
         //ar.insert(a1);
 
         //ar.update(1,"Alex Ovidiu","0722356132");
-        ar.updateP(1,"Catrina","parola.alex-2021");
+        //ar.updateP(1,"Catrina","parola.alex-2021");
+
+        ar.deleteA("Pirvu",4);
 
 
     }

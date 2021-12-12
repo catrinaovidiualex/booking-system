@@ -94,6 +94,13 @@ public class AngajatRepository {
         executeStatement(updateP);
 
     }
+    public void deleteA(String nume, int id_angajat){
+        //delete from angajat where nume="Popescu" and id_angajat=1
+        String deleteA="";
+        deleteA+=String.format("delete from angajat where nume='%s'",nume);
+        deleteA+=String.format(" and id_angajat=%d",id_angajat);
+        executeStatement(deleteA);
+    }
 
 
 

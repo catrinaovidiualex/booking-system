@@ -21,5 +21,9 @@ public class AngajatController {
     public void Parola(int id_angajat, String nume, String parola){
         angajati.updateP(id_angajat, nume, parola);
     }
+    public void deleteA(String nume, int id_angajat){
+        angajati.deleteA(nume,id_angajat);
+
+    }
 
 }

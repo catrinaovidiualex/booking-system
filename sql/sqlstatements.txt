@@ -117,8 +117,13 @@ delete from vagon where id_vagon=3
 select * from angajat
 
 insert into angajat(nume, prenume, nr_telefon, parola) values("Alex Ovidiu","Catrina","0722356789","alex.2021")
+insert into angajat(nume, prenume, nr_telefon, parola) values("Ionescu","Mihai","0752359789","imihai_1991")
+insert into angajat(nume, prenume, nr_telefon, parola) values("Pirvu","Ion","0722381789","ipirvu66")
+
 update angajat
-set nr_telefon="0766359317"
-where id_angajat=2 and nume="Popescu"
+set prenume="Alex", nume="Catrina"
+where id_angajat=1 
+
+delete from angajat where nume="Popescu" and id_angajat=1
 
 
