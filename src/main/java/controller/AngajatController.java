@@ -26,4 +26,22 @@ public class AngajatController {
 
     }
 
+    public String parola(String nume){
+        for (Angajat angajat:angajati.totiAngajatii()){
+            if(angajat.getNume().equals(nume)){
+                return angajat.getParola();
+            }
+        }
+        return null;
+        }
+    public Angajat angajat(String nume){
+        for(Angajat angajat: angajati.totiAngajatii()){
+            if(angajat.getNume().equals(nume)){
+                return  angajat;
+            }
+        }
+        return null;
+    }
+
+
 }
