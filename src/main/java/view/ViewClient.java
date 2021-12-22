@@ -24,4 +24,15 @@ public class ViewClient {
         this.vagoane = new VagonController();
         this.scanner = scanner;
     }
+
+    private String meniu(){
+
+        String text="";
+        text+="Apasati tasta 0 pentru a incheia\n";
+        text+="Apasati tasta 1 pentru a vizualiza toate facturile dumneavoastra\n";
+        text+="Apasati tasta 2 pentru a vizualiza toate rezervarile dumneavoastra\n";
+        text+="Apasati tasta 3 pentru a face o rezervare\n";
+
+        return text;
+    }
 }
