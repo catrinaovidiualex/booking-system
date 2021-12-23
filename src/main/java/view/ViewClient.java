@@ -35,4 +35,32 @@ public class ViewClient {
 
         return text;
     }
+
+    public void play(){
+        System.out.println(meniu());
+        boolean run =true;
+
+        while(run){
+            int alegere=Integer.parseInt(scanner.nextLine());
+            switch (alegere){
+                case 0:
+                    run=false;
+                    break;
+                case 1:
+                    /*facturiClient();*/
+                    break;
+                case 2:
+                    /*camereClient();*/
+                    break;
+                case 3:
+                   /* rezervare();*/
+                    break;
+                default:
+                    System.out.println(meniu());
+                    break;
+
+            }
+
+        }
+    }
 }
