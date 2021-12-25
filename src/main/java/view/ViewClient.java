@@ -2,7 +2,10 @@ package view;
 
 import controller.*;
 import model.Client;
+import model.Factura;
+import model.Rezervare;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class ViewClient {
@@ -47,10 +50,10 @@ public class ViewClient {
                     run=false;
                     break;
                 case 1:
-                    /*facturiClient();*/
+                    facturiClienti();
                     break;
                 case 2:
-                    /*camereClient();*/
+                    /*rezervariClienti();*/
                     break;
                 case 3:
                    /* rezervare();*/
@@ -63,4 +66,35 @@ public class ViewClient {
 
         }
     }
+
+    public void facturiClienti(){
+    List<Factura> fact=facturi.toate();
+    int ok=0;
+        for(Factura factura:fact){
+        if(factura.getId_client()== client.getClient_id()){
+            System.out.println(factura);
+            ok=1;
+        }
+    }
+        if(ok==0){
+        System.out.println("Nu aveti facturi inregistrate in sistem");
+    }
+}
+
+
+    public void rezervariClienti(){
+        List<Rezervare> rez=rezervari.toate();
+        int ok=0;
+        for(Rezervare rzv: rez){
+            if(rzv.getId_client()== client.getClient_id()){
+                System.out.println(rzv);
+                ok=1;
+            }
+        }
+        if(ok==0){
+            System.out.println("Nu aveti rezervari inregistrate in sistem");
+        }
+    }
+
+
 }
