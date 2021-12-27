@@ -101,6 +101,9 @@ public class ViewClient {
         Scanner scanner= new Scanner(System.in);
         System.out.println("Specificati tipul clasei pe care il doriti");
         int tipClasa=scanner.nextInt();
+        //int totalLocuri=vagoane. calculare numar total de locuri ???
+
+
 
 
 
@@ -118,6 +121,20 @@ public class ViewClient {
 
         }
         return nr;
+    }
+
+    //todo: returneaza primul loc nerezervat care are o anumita clasa specificata
+
+    public Vagon locNerezervat(int tipClasa){
+        List <Vagon> vagonS=vagoane.tipClasa(tipClasa);
+        for(Vagon vagoane: vagonS){
+            if(rezervari.locRezervat(vagoane.getId_vagon())==false){
+                return vagoane;
+
+            }
+        }
+        return null;
+
     }
 
 
