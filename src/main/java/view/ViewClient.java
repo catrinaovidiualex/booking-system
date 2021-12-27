@@ -4,6 +4,7 @@ import controller.*;
 import model.Client;
 import model.Factura;
 import model.Rezervare;
+import model.Vagon;
 
 import java.util.List;
 import java.util.Scanner;
@@ -103,6 +104,20 @@ public class ViewClient {
 
 
 
+    }
+
+    public int numarLocuriDisponibile(int tipLoc){
+        int nr=0;
+        List<Rezervare> rezLista=rezervari.toate();
+        for(Rezervare rezervari: rezLista) {
+            Vagon vagon=vagoane.id_vagon(rezervari.getNr_locrezervat());
+            if(vagon.getTip_clasa()==tipLoc){
+                nr++;
+
+        }
+
+        }
+        return nr;
     }
 
 
