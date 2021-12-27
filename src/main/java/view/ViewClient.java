@@ -96,5 +96,14 @@ public class ViewClient {
         }
     }
 
+    public void rezervareNoua(){
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Specificati tipul clasei pe care il doriti");
+        int tipClasa=scanner.nextInt();
+
+
+
+    }
+
 
 }
