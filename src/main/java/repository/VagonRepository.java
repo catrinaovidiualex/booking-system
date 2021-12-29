@@ -64,6 +64,11 @@ public class VagonRepository {
 
     }
 
+    /*de verificat cu Bogdan: functie pentru afisarea tuturor locurilor din Vagon*/
+    public List<Vagon> toateLocurileDinVagon(){
+return null;
+    }
+
     //CRUD
    public void insertV(Vagon vagon){
        String insertVg="";

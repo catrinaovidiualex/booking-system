@@ -35,6 +35,12 @@ public class VagonController {
         }
             return -1;
     }
+
+    /*de verificat cu Bogdan: cum aflu numarul de locuri din vagon? Fac o tabela in SQL 'locuri' si mentionez acolo locuri disponibile per vagon si per clasa?*/
+    public int numarTotalLocuriVagon(int tip_clasa){
+        return 0;
+
+    }
     public Vagon id_vagon(int id_vagon){
 
         List<Vagon> vgn=vagoane.toateVagoanele();

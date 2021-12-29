@@ -24,4 +24,27 @@ public class ViewLogin {
         return text;
     }
 
+    private void login(){
+        System.out.println("Introduceti statusul dumneavoastra: client sau administrator");
+        String status=scanner.nextLine();
+
+        if(status.equals("admin")==false && status.equals("client")==false){
+            System.out.println("Nu ati introdus un status valid!");
+
+        }
+        else{
+            System.out.println("Introduceti numele dumeavoastra:");
+            String numeA=scanner.nextLine();
+            System.out.println("Introduceti parola dumneavoastra:");
+            String parolaA=scanner.nextLine();
+
+        }
+        if (status.equals("admin")){
+
+
+        }
+    }
+
+
+
 }

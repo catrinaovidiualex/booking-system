@@ -96,7 +96,7 @@ public class ViewClient {
             System.out.println("Nu aveti rezervari inregistrate in sistem");
         }
     }
-
+    /*de verificat cu Bogdan: cum pot sa restictionez sa nu se faca o rezervare noua pe un loc care este deja rezervat*/
     public void rezervareNoua(){
         Scanner scanner= new Scanner(System.in);
         System.out.println("Specificati tipul clasei pe care il doriti");
@@ -109,7 +109,8 @@ public class ViewClient {
 
     }
 
-    public int numarLocuriDisponibile(int tipLoc){
+    /*de verificat cu Bogdan: rezervare se face pe loc si in fct de clasa vagonului - functia asta ar trebui refacuta*/
+    public int numarLocuriIndisponibile(int tipLoc){
         int nr=0;
         List<Rezervare> rezLista=rezervari.toate();
         for(Rezervare rezervari: rezLista) {
@@ -132,6 +133,7 @@ public class ViewClient {
                 return vagoane;
 
             }
+
         }
         return null;
 
