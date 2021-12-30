@@ -27,6 +27,8 @@ public class ViewLogin {
     private void login(){
         System.out.println("Introduceti statusul dumneavoastra: client sau administrator");
         String status=scanner.nextLine();
+        String nume="";
+        String parola="";
 
         if(status.equals("admin")==false && status.equals("client")==false){
             System.out.println("Nu ati introdus un status valid!");
@@ -34,17 +36,29 @@ public class ViewLogin {
         }
         else{
             System.out.println("Introduceti numele dumeavoastra:");
-            String numeA=scanner.nextLine();
+            nume=scanner.nextLine();
             System.out.println("Introduceti parola dumneavoastra:");
-            String parolaA=scanner.nextLine();
+            parola=scanner.nextLine();
 
         }
-        if (status.equals("admin")){
+        if (status.equals("admin")) {
+
+            if (angajati.parola(nume) == null || !angajati.parola(nume).equals(parola)) {
+                System.out.println("numele de utilizator sau parola este incorecta");
+            } else {
+                Angajat a = angajati.angajat(nume);
+                ViewAdministrator administrator = new ViewAdministrator(a);
+                administrator.play();
+            }
+        }
+            else if (status.equals("client")){
 
 
+
+            }
         }
     }
 
 
 
-}
+

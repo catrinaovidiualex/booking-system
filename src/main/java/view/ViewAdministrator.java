@@ -16,4 +16,18 @@ public class ViewAdministrator {
     private VagonController vagoane;
     private Scanner scanner;
 
+
+    public ViewAdministrator(Angajat angajat) {
+        this.angajat = angajat;
+        this.clienti = new ClientController();
+        this.facturi = new FacturaController();
+        this.rezervari = new RezervareController();
+        this.trenuri = new TrenController();
+        this.vagoane = new VagonController();
+        this.scanner = scanner;
+    }
+
+    public void play (){
+
+    }
 }
