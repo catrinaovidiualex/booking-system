@@ -21,6 +21,17 @@ public class ClientController {
         }
         return false;
     }
+    public void insert(Client client){
+        if (exist(client)==false){
+            clienti.insert(client);
+            System.out.println("Clientul a fost adaugat in baza de date");
+        }
+        else{
+            System.out.println("Clinetul exista in baza de date");
+        }
+    }
+
+
 
 
 
