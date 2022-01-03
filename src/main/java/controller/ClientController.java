@@ -33,7 +33,7 @@ public class ClientController {
         }
     }
     public void delete(String nume, String prenume){
-        if(exist(client(nume))==true && exist(client(prenume))==true){
+        if(exist(client(nume, prenume))==true){
             clienti.delete(nume, prenume);
             System.out.println("Clientul a fost sters");
         }else{
@@ -41,7 +41,7 @@ public class ClientController {
         }
     }
     public void updateAdresa(String nume, String prenume,String adresaNoua){
-        if(exist(client(nume, prenume))==true){
+        if(exist(client(nume,prenume))==true){
         clienti.updateAdresa(nume, prenume, adresaNoua);
         System.out.println("Adresa clientului a fost modificata cu succes!");}
         else{
@@ -49,29 +49,31 @@ public class ClientController {
         }
 
     }
-
-
-
-    public Client updateTelefon(String nume, String prenume, String nr_telefon){
-        if(exist(client(nume))==true && exist(client(prenume))==true){
-            clienti.updateAdresa(nume, prenume, adresaNoua);
-            System.out.println("Adresa clientului a fost modificata cu succes!");}
-        else{
+    public void updateTelefon(String nume, String prenume, String nr_telefon) {
+        if (exist(client(nume, prenume)) == true) {
+            clienti.updateTelefon(nume, prenume, nr_telefon);
+            System.out.println("Adresa clientului a fost modificata cu succes!");
+        } else {
             System.out.println("Adresa clientului nu se poate modifica intrucat acesta nu exista in baza de date");
         }
 
+    }
 
-        // todo: functie care returneaza toti clientii dupa nume si prenume
 
-        public Client client(String nume, String prenume) {
-            for (Client clt: clienti.totiClientii()){
-                if(client.getNume().equals(nume) && client.getPrenume().equals(prenume)){
-                    return clt;
-                }
+
+    // todo: functie care returneaza toti clientii dupa nume si prenume
+    private Client client(java.lang.String nume, java.lang.String prenume) {
+        for (Client clt: clienti.totiClientii()){
+            if(clt.getNume().equals(nume) && clt.getPrenume().equals(prenume)){
+                return clt;
             }
-            return new Client(-1,"", "","","","");
         }
-        }
+        return new Client(-1,"", "","","","");
+    }
+
+
+
+
 
 
 
