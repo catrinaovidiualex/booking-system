@@ -58,11 +58,15 @@ public class ClientController {
         }
 
     }
-
+    public void afisare(){
+        for (Client clt: clienti.totiClientii()){
+            System.out.println(clt);
+        }
+    }
 
 
     // todo: functie care returneaza toti clientii dupa nume si prenume
-    private Client client(java.lang.String nume, java.lang.String prenume) {
+    public Client client(java.lang.String nume, java.lang.String prenume) {
         for (Client clt: clienti.totiClientii()){
             if(clt.getNume().equals(nume) && clt.getPrenume().equals(prenume)){
                 return clt;
@@ -71,9 +75,16 @@ public class ClientController {
         return new Client(-1,"", "","","","");
     }
 
+    //todo: functie care returneaza parola clientului in functie de numele si prenumele lui
+    public String parola(String nume, String prenume){
+        for (Client clt: clienti.totiClientii()){
+            if(clt.getNume().equals(nume) && clt.getPrenume().equals(prenume)){
+                return clt.getParola();
+            }
+        }
+        return null;
 
-
-
+    }
 
 
 

@@ -108,6 +108,5 @@ public class ClientRepository {
     }
 
 
-    public void delete(String nume) {
-    }
+
 }
