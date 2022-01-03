@@ -86,9 +86,20 @@ public class ClientRepository {
 
     }
 
-    public void delete(Client client){
-        String numeC=client.getNume();
-        String prenumeC=client.getPrenume();
+
+    public void updateTelefon(String nume, String prenume,String nr_telefon){
+
+        String update="";
+        update=String.format("update client set nr_telefon='%s'",nr_telefon);
+        update+=String.format(" where nume='%s'", nume);
+        update+=String.format(" and prenume='%s'", prenume);
+
+        executeStatement(update);
+
+    }
+
+    public void delete(String numeC, String prenumeC){
+
         String deleteC="";
         deleteC+=String.format("delete from client where nume='%s'",numeC);
         deleteC+=String.format("and prenume='%s'",prenumeC);
@@ -97,7 +108,6 @@ public class ClientRepository {
     }
 
 
-
-
-
+    public void delete(String nume) {
+    }
 }

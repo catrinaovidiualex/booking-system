@@ -126,4 +126,12 @@ where id_angajat=1
 
 delete from angajat where nume="Popescu" and id_angajat=1
 
+update client
+set nr_telefon="0723345690"
+where nume="Mutu" and prenume="Adina"
+
+update client
+set nr_telefon="0776688991"
+where nume="Catrina" and prenume="Alexandru"
+
 
