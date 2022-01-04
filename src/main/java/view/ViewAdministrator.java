@@ -1,7 +1,7 @@
 package view;
 
 import controller.*;
-import model.Angajat;
+import model.*;
 
 import java.util.Scanner;
 
@@ -19,15 +19,18 @@ public class ViewAdministrator {
 
     public ViewAdministrator(Angajat angajat) {
         this.angajat = angajat;
+        this.angajati=new AngajatController();
         this.clienti = new ClientController();
         this.facturi = new FacturaController();
         this.rezervari = new RezervareController();
         this.trenuri = new TrenController();
         this.vagoane = new VagonController();
-        this.scanner = scanner;
+        this.scanner = new Scanner(System.in);
+
+
+
+
     }
 
-    public void play (){
 
-    }
 }

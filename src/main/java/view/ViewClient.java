@@ -54,7 +54,7 @@ public class ViewClient {
                     facturiClienti();
                     break;
                 case 2:
-                    /*rezervariClienti();*/
+                    rezervariClienti();
                     break;
                 case 3:
                    /* rezervare();*/
