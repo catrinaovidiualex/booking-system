@@ -31,6 +31,44 @@ public class ViewAdministrator {
 
 
     }
+    private String meniuFactura(){
+     String text="";
+     text+="Apasati 0 pentru a incheia\n";
+     text+="Apasati tasta 1 pentru a vizualiza toate facturile\n";
+     text+="Apasati tasta 2 pentru a adauga o factura\n";
+     text+="Apasati tasta 3 pentru a sterge o factura\n";
+     text+="Apasati tasta 4 pentru a modifica pretul biletului din factura\n";
+
+
+
+     return text;
+    }
+
+
+
+
+    private void playFacturi(){
+        System.out.println(meniuFactura());
+        boolean run=false;
+
+        while(run){
+            int alegere=Integer.parseInt(scanner.nextLine());
+
+            switch (alegere){
+                case 0:
+                    run=false;
+                    break;
+                case 1:
+                    facturi.afisare();
+                    break;
+
+
+
+            }
+
+        }
+
+    }
 
 
 }
