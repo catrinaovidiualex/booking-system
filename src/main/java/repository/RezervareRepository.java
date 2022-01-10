@@ -55,7 +55,7 @@ public class RezervareRepository {
         try{
             while(set.next()){
                //Rezervare(int id_rezervare, Date data_rezervare, int id_client, int id_vagon, int id_tren, int nr_locrezervat)
-               rezervari.add(new Rezervare(set.getInt(1),set.getString(2),set.getInt(3),set.getInt(4),set.getInt(5),set.getInt(6)));
+               rezervari.add(new Rezervare(set.getString(2),set.getInt(3),set.getInt(4),set.getInt(5),set.getInt(6)));
 
             }
         }catch (Exception e){

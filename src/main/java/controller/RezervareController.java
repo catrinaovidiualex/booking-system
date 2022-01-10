@@ -54,7 +54,7 @@ public class RezervareController {
                 return rezervare;
             }
         }
-        return new Rezervare(-1,"1900-01-01",-1,-1,-1,-1);
+        return new Rezervare("1900-01-01",-1,-1,-1,-1);
     }
 
     //CRUD

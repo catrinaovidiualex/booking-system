@@ -31,9 +31,18 @@ public class ViewAdministrator {
 
 
     }
+    private String meniu(){
+        String text="";
+        text+="Apasati tasta 0 pentru a incheia\n";
+        text+="Apasati tasta 1 pentru a accesa meniul facturi\n";
+        text+="Apasati tasta 2 pentru a accesa meniul rezervari\n";
+        text+="Apasati tasta 3 pentru a accesa meniul vagoane\n";
+        text+="Apasati tasta 4 pentru a accesa meniul clienti\n";
+        return text;
+    }
     private String meniuFactura(){
      String text="";
-     text+="Apasati 0 pentru a incheia\n";
+     text+="Apasati tasta 0 pentru a incheia\n";
      text+="Apasati tasta 1 pentru a vizualiza toate facturile\n";
      text+="Apasati tasta 2 pentru a adauga o factura\n";
      text+="Apasati tasta 3 pentru a sterge o factura\n";
@@ -43,6 +52,20 @@ public class ViewAdministrator {
 
      return text;
     }
+    private String meniuRezervare(){
+        String text="";
+        text+="Apasati tasta 0 pentru a incheia\n";
+        text+="Apasati tasta 1 pentru a vizualiza toate rezervarile\n";
+        text+="Apasati tasta 2 pentru a inregistra o rezervare noua\n";
+        text+="Apasati tasta 3 penru a sterge o rezervare existenta\n";
+        text+="Apasati tasta 4 pentru a modifica id-ul camerei rezervate\n";
+        text+="Apasati tasta 5 pentru a modifica id-ul clientului din rezervare\n ";
+
+        return text;
+
+
+    }
+
 
 
 
@@ -78,13 +101,46 @@ public class ViewAdministrator {
         }
 
     }
+    private void playRezervare(){
+        boolean run=true;
+        while(run){
+            int alegere=Integer.parseInt(scanner.nextLine());
+            switch(alegere){
+                case 0:
+                    run=false;
+                    break;
+                case 1:
+                    rezervari.afisare();
+                    break;
+                case 2:
+                    insertRezervare();
+                    break;
+                case 3:
+                    deleteRezervare();
+                    break;
+                case 4:
+                    //modificare camera rezervata
+                    break;
+                case 5:
+                    //modificare client al rezervarii;
+                    break;
+
+                default:
+                    meniuRezervare();
+                    break;
+
+
+            }
+        }
+
+    }
 
 
     public void play(){
 
     }
 
-    //insert statements
+    //meniu Factura
     private void insertFactura(){
         System.out.println("Introduceti id-ul clientului\n");
         int idClient=Integer.parseInt(scanner.nextLine());
@@ -112,6 +168,37 @@ public class ViewAdministrator {
         facturi.updatePretBilet(idFactura,pretNou);
 
     }
+
+    //meniu Rezervare
+    private void insertRezervare(){
+        // public Rezervare(String data_rezervare, int id_client, int id_vagon, int id_tren, int nr_locrezervat)
+        System.out.println("Introduceti data rezervarii - aceasta trebuie sa fie de tipul AAAA-LL-ZZ");
+        String dataRezervare=scanner.nextLine();
+        System.out.println("Introduceti id-ul clientului");
+        int idClient=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti id-ul vagonului");
+        int idVagon=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti id-ul trenului");
+        int idTren=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti numarul locului rezervarii");
+        int nrLocRezervat=Integer.parseInt(scanner.nextLine());
+
+        Rezervare rezervareNoua=new Rezervare(dataRezervare,idClient,idVagon,idTren,nrLocRezervat);
+        rezervari.insert(rezervareNoua);
+    }
+    private void deleteRezervare(){
+        System.out.println("Introduceti id-ul rezervarii pe care doriti sa o stergeti: ");
+        int idRezervare=Integer.parseInt(scanner.nextLine());
+
+        rezervari.deleteRezervare(idRezervare);
+    }
+
+
+
+    //meniu vagoane
+
+    //meniu clienti
+
 
 
 }
