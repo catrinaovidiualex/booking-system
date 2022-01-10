@@ -119,10 +119,10 @@ public class ViewAdministrator {
                     deleteRezervare();
                     break;
                 case 4:
-                    //modificare camera rezervata
+                    //modificare loc rezervat
                     break;
                 case 5:
-                    //modificare client al rezervarii;
+                    //modificare clientului aferent rezervarii;
                     break;
 
                 default:
@@ -191,6 +191,19 @@ public class ViewAdministrator {
         int idRezervare=Integer.parseInt(scanner.nextLine());
 
         rezervari.deleteRezervare(idRezervare);
+    }
+    private void updateLocRezervare(){
+        System.out.println("Introduceti id-ul rezervarii existente");
+        int idRezervare=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti noul numar al locului de rezervat");
+        int nrLocRezervare=Integer.parseInt(scanner.nextLine());
+
+        rezervari.updateLocRezervare(idRezervare,nrLocRezervare);
+
+
+
+
+
     }
 
 
