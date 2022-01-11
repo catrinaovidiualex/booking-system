@@ -61,7 +61,7 @@ public class TrenController {
 
     //CRUD
 
-    private void afisare(){
+    public void afisare(){
         for(Tren trn: trenuri.toateTrenurile()) {
             System.out.println(trn);
         }

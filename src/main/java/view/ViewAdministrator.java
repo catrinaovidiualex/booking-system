@@ -135,6 +135,42 @@ public class ViewAdministrator {
         }
 
     }
+    private void playTren(){
+        boolean run=true;
+        while(run){
+            int alegere=Integer.parseInt(scanner.nextLine());
+            switch(alegere){
+                case 0:
+                    run=false;
+                    break;
+                case 1:
+                    trenuri.afisare();
+                    break;
+                case 2:
+                    insertRezervare();
+                    break;
+                case 3:
+                    deleteRezervare();
+                    break;
+                case 4:
+                    updateLocRezervare();
+                    break;
+                case 5:
+                    updateClientRezervare();
+                    break;
+                case 6:
+                    updateVagonRezervare();
+                    break;
+
+
+                default:
+                    meniuRezervare();
+                    break;
+
+
+            }
+        }
+    }
 
 
     public void play(){
@@ -224,6 +260,24 @@ public class ViewAdministrator {
         rezervari.updateLocRezervare(idRezervare,idVagonNou);
     }
 
+
+    //functii pentru meniu tren
+    private void insertTren(){
+        /*(int numar_tren,String tip_tren, String statiaPlecare, String statiaSosire, int id_vagon)*/
+        System.out.println("Introduceti numarul trenului");
+        int nrTren=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti tipul trenului");
+        String tipTren=scanner.nextLine();
+        System.out.println("Introduceti statia de plecare a trenului");
+        String statiePlecare=scanner.nextLine();
+        System.out.println("Introduceti statia de sosire a trenului");
+        String statieSosire=scanner.nextLine();
+        System.out.println("Introduceti id-ul vagonului");
+        int idVagon=Integer.parseInt(scanner.nextLine());
+
+        Tren trenNou=new Tren(nrTren,tipTren,statiePlecare,statieSosire,idVagon);
+        trenuri.insert(trenNou);
+    }
 
 
     //meniu vagoane
