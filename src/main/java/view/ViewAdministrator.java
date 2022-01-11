@@ -36,8 +36,9 @@ public class ViewAdministrator {
         text+="Apasati tasta 0 pentru a incheia\n";
         text+="Apasati tasta 1 pentru a accesa meniul facturi\n";
         text+="Apasati tasta 2 pentru a accesa meniul rezervari\n";
-        text+="Apasati tasta 3 pentru a accesa meniul vagoane\n";
-        text+="Apasati tasta 4 pentru a accesa meniul clienti\n";
+        text+="Apasati tasta 3 pentru a accesa meniul trenuri\n";
+        text+="Apasati tasta 4 pentru a accesa meniul vagoane\n";
+        text+="Apasati tasta 5 pentru a accesa meniul clienti\n";
         return text;
     }
     private String meniuFactura(){
@@ -63,6 +64,17 @@ public class ViewAdministrator {
         return text;
 
 
+    }
+    private String meniuTren(){
+        String text="";
+        text+="Apasati tasta 0 pentru a incheia\n";
+        text+="Apasati tasta 1 pentru a vizualiza toate trenurile\n";
+        text+="Apasati tasta 2 pentru a adauga un tren\n";
+        text+="Apasati tasta 3 pentru a sterge un tren\n";
+        text+="Apasati tasta 4 pentru a modifica numarul trenului\n";
+        text+="Apasati tasta 5 pentru a modifica tipul trenului\n";
+
+        return text;
     }
 
 
@@ -147,21 +159,17 @@ public class ViewAdministrator {
                     trenuri.afisare();
                     break;
                 case 2:
-                    insertRezervare();
+                    insertTren();
                     break;
                 case 3:
-                    deleteRezervare();
+                    //deleteTren();
                     break;
                 case 4:
-                    updateLocRezervare();
+                    //updateNrTren();
                     break;
                 case 5:
-                    updateClientRezervare();
+                    //updateTipTren();
                     break;
-                case 6:
-                    updateVagonRezervare();
-                    break;
-
 
                 default:
                     meniuRezervare();
