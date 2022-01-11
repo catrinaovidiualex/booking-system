@@ -162,13 +162,13 @@ public class ViewAdministrator {
                     insertTren();
                     break;
                 case 3:
-                    //deleteTren();
+                    deleteTren();
                     break;
                 case 4:
-                    //updateNrTren();
+                    updateNrTren();
                     break;
                 case 5:
-                    //updateTipTren();
+                    updateTipTren();
                     break;
 
                 default:
@@ -253,7 +253,7 @@ public class ViewAdministrator {
     private void updateClientRezervare(){
         System.out.println("Introduceti id-ul rezervarii existente");
         int idRezervare=Integer.parseInt(scanner.nextLine());
-        System.out.println("Introducetinoul id de client pentru a modifica rezervarea");
+        System.out.println("Introduceti noul id de client pentru a modifica rezervarea");
         int idClientNou=Integer.parseInt(scanner.nextLine());
 
         rezervari.updateLocRezervare(idRezervare,idClientNou);
@@ -285,6 +285,30 @@ public class ViewAdministrator {
 
         Tren trenNou=new Tren(nrTren,tipTren,statiePlecare,statieSosire,idVagon);
         trenuri.insert(trenNou);
+    }
+    private void deleteTren(){
+        System.out.println("Introduceti id-ul trenului pe care doriti sa il stergeti: ");
+        int idTren=Integer.parseInt(scanner.nextLine());
+
+        trenuri.deleteTren(idTren);
+
+    }
+    private void updateNrTren(){
+        System.out.println("Introduceti id-ul trenului existent");
+        int idTren=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti noul numar de tren pentru a-l modifica");
+        int nrTrenNou=Integer.parseInt(scanner.nextLine());
+
+        trenuri.updateNumarTren(idTren,nrTrenNou);
+
+    }
+    private void updateTipTren(){
+        System.out.println("Introduceti id-ul trenului existent");
+        int idTren=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti noul tip de tren pentru a-l modifica");
+        int tipTrenNou=Integer.parseInt(scanner.nextLine());
+
+        trenuri.updateNumarTren(idTren,tipTrenNou);
     }
 
 
