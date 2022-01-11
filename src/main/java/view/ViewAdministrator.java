@@ -139,7 +139,7 @@ public class ViewAdministrator {
 
 
                 default:
-                    meniuRezervare();
+                    System.out.println(meniuRezervare());
                     break;
 
 
@@ -172,7 +172,7 @@ public class ViewAdministrator {
                     break;
 
                 default:
-                    meniuRezervare();
+                    System.out.println(meniuTren());
                     break;
 
 
