@@ -76,6 +76,18 @@ public class ViewAdministrator {
 
         return text;
     }
+    private String meniuVagon(){
+        String text="";
+        text+="Apasati tasta 0 pentru a incheia\n";
+        text+="Apasati tasta 1 pentru a vizualiza toate vagoanele\n";
+        text+="Apasati tasta 2 pentru a adauga un vagon\n";
+        text+="Apasati tasta 3 pentru a sterge un vagon\n";
+        text+="Apasati tasta 4 pentru a modifica id trenului pentru un anumit vagon\n";
+        text+="Apasati tasta 5 pentru a modifica numarul locului pentru un anumit vagon\n";
+
+        return text;
+
+    }
 
 
 
@@ -173,6 +185,38 @@ public class ViewAdministrator {
 
                 default:
                     System.out.println(meniuTren());
+                    break;
+
+
+            }
+        }
+    }
+    private void playVagon(){
+        boolean run=true;
+        while(run){
+            int alegere=Integer.parseInt(scanner.nextLine());
+            switch(alegere){
+                case 0:
+                    run=false;
+                    break;
+                case 1:
+                    vagoane.afisareV();
+                    break;
+                case 2:
+                    insertVagon();
+                    break;
+                case 3:
+                    //deleteVagon();
+                    break;
+                case 4:
+                    //updateIdTrenV();
+                    break;
+                case 5:
+                    //updateNrLocV();
+                    break;
+
+                default:
+                    System.out.println(meniuVagon());
                     break;
 
 
@@ -313,6 +357,10 @@ public class ViewAdministrator {
 
 
     //meniu vagoane
+
+    private void insertVagon(){
+
+    }
 
     //meniu clienti
 
