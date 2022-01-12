@@ -72,7 +72,7 @@ public class ClientController {
                 return clt;
             }
         }
-        return new Client(-1,"", "","","","");
+        return new Client("", "","","","");
     }
 
     //todo: functie care returneaza parola clientului in functie de numele si prenumele lui

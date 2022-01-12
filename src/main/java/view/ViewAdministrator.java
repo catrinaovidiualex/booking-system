@@ -88,6 +88,18 @@ public class ViewAdministrator {
         return text;
 
     }
+    private String meniuClient(){
+        String text="";
+        text+="Apasati tasta 0 pentru a incheia\n";
+        text+="Apasati tasta 1 pentru a vizualiza toti clientii\n";
+        text+="Apasati tasta 2 pentru a adauga un client nou\n";
+        text+="Apasati tasta 3 pentru a sterge un client existent\n";
+        text+="Apasati tasta 4 pentru a modifica adresa unui client existent\n";
+        text+="Apasati tasta 5 pentru a modifica numarul de telefon al unui client existent\n";
+
+        return text;
+    }
+
 
 
 
@@ -223,6 +235,39 @@ public class ViewAdministrator {
             }
         }
     }
+    private void playClient(){
+        boolean run=true;
+        while(run){
+            int alegere=Integer.parseInt(scanner.nextLine());
+            switch(alegere){
+                case 0:
+                    run=false;
+                    break;
+                case 1:
+                    clienti.afisare();
+                    break;
+                case 2:
+                    insertClient();
+                    break;
+                case 3:
+                    deleteClient();
+                    break;
+                case 4:
+                    updateAdresaClient();
+                    break;
+                case 5:
+                    updateNrTelClient();
+                    break;
+
+                default:
+                    System.out.println(meniuClient());
+                    break;
+
+
+            }
+        }
+
+    }
 
 
     public void play(){
@@ -355,9 +400,7 @@ public class ViewAdministrator {
         trenuri.updateNumarTren(idTren,tipTrenNou);
     }
 
-
-    //meniu vagoane
-
+    //functii pentru meniu vagoane
     private void insertVagon(){
         /*(int tip_clasa, int numar_vagon, int id_tren, int nr_loc)*/
         System.out.println("Introduceti tipul clasei");
@@ -398,7 +441,56 @@ public class ViewAdministrator {
 
     }
 
-    //meniu clienti
+    //functii pentru meniu clienti
+    private void insertClient(){
+        /*(String nume, String prenume, String adresa, String nr_telefon, String parola)*/
+        System.out.println("Introduceti numele clientului");
+        String numeClient=scanner.nextLine();
+        System.out.println("Introduceti prenumele clientului");
+        String prenumeClient=scanner.nextLine();
+        System.out.println("Introduceti adresa clientului");
+        String adresaClient=scanner.nextLine();
+        System.out.println("Introduceti numarul de telefon al clientului");
+        String nrTelefonClient=scanner.nextLine();
+        System.out.println("Introduceti parola");
+        String parolaClient=scanner.nextLine();
+
+        Client clientNou=new Client(numeClient,prenumeClient,adresaClient,nrTelefonClient,parolaClient);
+        clienti.insert(clientNou);
+
+    }
+    private void deleteClient(){
+        System.out.println("Introduceti numele clientului pe care doriti sa il stergeti");
+        String numeClient=scanner.nextLine();
+        System.out.println("Introduceti prenumele clientului pe care doriti sa il stergeti");
+        String prenumeClient=scanner.nextLine();
+
+        clienti.delete(numeClient,prenumeClient);
+
+    }
+    private void updateAdresaClient(){
+        System.out.println("Introduceti numele clientului existent pentru a-i modifica adresa ");
+        String numeClient=scanner.nextLine();
+        System.out.println("Introduceti prenumele clientului existent pentru a-i modifica adresa");
+        String prenumeClient=scanner.nextLine();
+        System.out.println("Introduceti noua adresa pentru acest client");
+        String adresaNouaClient=scanner.nextLine();
+
+        clienti.updateAdresa(numeClient,prenumeClient,adresaNouaClient);
+
+
+    }
+    private void updateNrTelClient(){
+        System.out.println("Introduceti numele clientului existent pentru a-i modifica numarul de telefon ");
+        String numeClient=scanner.nextLine();
+        System.out.println("Introduceti prenumele clientului existent pentru a-i modifica numarul de telefon");
+        String prenumeClient=scanner.nextLine();
+        System.out.println("Introduceti noul numar de telefon pentru acest client");
+        String nrTelNouClient=scanner.nextLine();
+
+        clienti.updateAdresa(numeClient,prenumeClient,nrTelNouClient);
+
+    }
 
 
 
