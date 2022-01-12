@@ -206,13 +206,13 @@ public class ViewAdministrator {
                     insertVagon();
                     break;
                 case 3:
-                    //deleteVagon();
+                    deleteVagon();
                     break;
                 case 4:
-                    //updateIdTrenV();
+                    updateIdTrenV();
                     break;
                 case 5:
-                    //updateNrLocV();
+                    updateNrLocV();
                     break;
 
                 default:
@@ -359,6 +359,42 @@ public class ViewAdministrator {
     //meniu vagoane
 
     private void insertVagon(){
+        /*(int tip_clasa, int numar_vagon, int id_tren, int nr_loc)*/
+        System.out.println("Introduceti tipul clasei");
+        int tipClasa=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti numarul vagonului");
+        int nrVagon=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti id-ul trenului");
+        int idTren=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti numarul locului in vagon");
+        int nrLocVag=Integer.parseInt(scanner.nextLine());
+
+        Vagon vagonNou=new Vagon(tipClasa,nrVagon,idTren,nrLocVag);
+        vagoane.insertVg(vagonNou);
+
+    }
+    private void deleteVagon(){
+        System.out.println("Introduceti id-ul vagonului pe care doriti sa il stergeti: ");
+        int idVagon=Integer.parseInt(scanner.nextLine());
+
+        vagoane.delete(idVagon);
+
+    }
+    private void updateIdTrenV(){
+        System.out.println("Introduceti id-ul vagonului existent");
+        int idVagon=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti noul id de tren aferent acestui vagon");
+        int idTrenNou=Integer.parseInt(scanner.nextLine());
+
+        vagoane.updateIdTren(idVagon,idTrenNou);
+    }
+    private void updateNrLocV(){
+        System.out.println("Introduceti id-ul vagonului existent");
+        int idVagon=Integer.parseInt(scanner.nextLine());
+        System.out.println("Introduceti nr locului nou aferent acestui vagon");
+        int nrLocNou=Integer.parseInt(scanner.nextLine());
+
+        vagoane.updateIdTren(idVagon,nrLocNou);
 
     }
 
