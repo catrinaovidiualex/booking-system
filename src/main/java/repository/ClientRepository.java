@@ -54,8 +54,8 @@ public class ClientRepository {
         try{
             while(set.next()){
 
-                //public Client(int client_id, String nume, String prenume, String adresa, String nr_telefon, String parola)
-                clienti.add(new Client(Integer.parseInt(set.getString(1)),set.getString(2), set.getString(3),set.getString(4),set.getString(5),set.getString(6)));
+                //public Client(String nume, String prenume, String adresa, String nr_telefon, String parola)
+                clienti.add(new Client(set.getString(1), set.getString(2),set.getString(3),set.getString(4),set.getString(5)));
             }
         }catch (Exception e){
             e.printStackTrace();

@@ -26,7 +26,7 @@ public class ViewLogin {
     }
 
     private void login() {
-        System.out.println("Introduceti statusul dumneavoastra: client sau administrator");
+        System.out.println("Introduceti statusul dumneavoastra: client sau admin");
         String status = scanner.nextLine();
         String nume = "";
         String prenume = "";
