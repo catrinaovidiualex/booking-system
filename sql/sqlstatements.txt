@@ -60,12 +60,15 @@ CREATE TABLE tren (
     statiaSosire varchar(255) not null,
     id_vagon int not null
     );
-
+select * from angajat
 select * from client
 select * from factura
 select * from rezervare
 select * from tren
 select * from vagon
+
+update angajat set parola='Alex.admin2022'
+where nume="Catrina"
 
 insert into client(nume, prenume, adresa, nr_telefon, parola) values('Popescu','Ion','Bd. Eroilor, Bucuresti, sector2','0766982315','pion2021')
 insert into client(nume, prenume, adresa, nr_telefon, parola) values('Ionescu','Ana','str. M. Eminescu, nr. 2, Brasov','0776328927','ananaionescu')
@@ -107,9 +110,10 @@ where id_tren=3
 
 delete from tren where id_tren=5
 
-
+select *  from vagon
 insert into vagon (tip_clasa,numar_vagon,id_tren,nr_loc) values (1,3,1299,45)
 insert into vagon (tip_clasa,numar_vagon,id_tren,nr_loc) values (2,6,4,73)
+insert into vagon (tip_clasa,numar_vagon,id_tren,nr_loc) values (2,3,3,45)
 update vagon set id_tren=3 where id_vagon=1
 
 delete from vagon where id_vagon=3

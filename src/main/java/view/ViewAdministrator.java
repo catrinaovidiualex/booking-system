@@ -31,6 +31,7 @@ public class ViewAdministrator {
 
 
     }
+
     private String meniu(){
         String text="";
         text+="Apasati tasta 0 pentru a incheia\n";
