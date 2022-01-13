@@ -271,6 +271,33 @@ public class ViewAdministrator {
 
 
     public void play(){
+        System.out.println(meniu());
+        boolean run=true;
+
+        while(run){
+            int alegere=Integer.parseInt(scanner.nextLine());
+            switch (alegere){
+                case 0:
+                    run=false;
+                    break;
+                case 1:
+                    playFacturi();
+                    break;
+                case 2:
+                    playTren();
+                    break;
+                case 3:
+                    playVagon();
+                    break;
+                case 4:
+                    playClient();
+                    break;
+                default:
+                    System.out.println(meniu());
+                    break;
+
+            }
+        }
 
     }
 
